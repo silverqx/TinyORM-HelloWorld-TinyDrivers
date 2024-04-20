@@ -4,9 +4,9 @@
 [![Building: Hello world - TinyORM - www.tinyorm.org][helloworld-docs-badge]][helloworld-docs]
 [![License MIT][license-badge]][license]
 
-This Hello world example application does several things, it prepares the `qmake` or `CMake` build systems using dynamic linkage and does two simple queries against the `SQLite` database. The first query uses the `QueryBuilder` and the second one uses the `ORM` (`Post` model).
+This Hello world example application does several things, it prepares the `qmake` or `CMake` build systems using dynamic linkage and does two simple queries against the `MySQL` database. The first query uses the `QueryBuilder` and the second one uses the `ORM` (`User` model).
 
-This `HelloWorld-TinyDrivers` example is primarily used in `vcpkg-windows-drivers.yml` GitHub workflow and it uses `TinyDrivers` library as the SQL database layer instead of the `QtSql` module. Because of this it currently can't use SQLite database as `TinyDrivers` only supports `MySQL` database.
+This `HelloWorld-TinyDrivers` example is primarily used in `vcpkg-windows-drivers.yml` and `vcpkg-linux-drivers.yml` GitHub workflows and it uses `TinyDrivers` library as the SQL database layer instead of the `QtSql` module. Because of this it currently can't use SQLite database as `TinyDrivers` only supports `MySQL` database.
 
 Copy the [`.qmake.conf.example`](https://github.com/silverqx/TinyORM-HelloWorld-TinyDrivers/blob/main/.qmake.conf.example) to `.qmake.conf`, open it, and set the following `qmake` variable so the `HelloWorld-TinyDrivers` project can find the [`qmake/TinyOrm.pri`](https://github.com/silverqx/TinyORM/blob/main/qmake/TinyOrm.pri) file:
 
