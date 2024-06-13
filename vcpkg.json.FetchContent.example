@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "tinyorm-helloworld-tinydrivers",
   "version-semver": "0.1.0",
+  "maintainers": "Silver Zachara <silver.zachara@gmail.com>",
   "description": "Hello world console application for TinyORM C++ library (using TinyDrivers)",
   "homepage": "https://github.com/silverqx/TinyORM-HelloWorld-TinyDrivers",
   "documentation": "https://www.tinyorm.org/building/hello-world",
-  "maintainers": "Silver Zachara <silver.zachara@gmail.com>",
   "license": "MIT",
   "supports": "!(uwp | arm | android | emscripten | osx | ios | xbox | freebsd | openbsd | wasm32)",
   "dependencies": [
