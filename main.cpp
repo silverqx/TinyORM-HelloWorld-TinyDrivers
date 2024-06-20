@@ -47,6 +47,7 @@ using Orm::Constants::username_;
 
 using Orm::DB;
 using Orm::LibraryInfo;
+using Orm::QtTimeZoneConfig;
 using Orm::Tiny::Model;
 using Orm::Utils::Helpers;
 
@@ -79,9 +80,9 @@ void run()
         // Very important for tests
         {timezone_,       TZ00},
         /* Specifies what time zone all QDateTime-s will have, the overridden default
-           is the Qt::UTC, set to the Qt::LocalTime or QtTimeZoneType::DontConvert to
+           is the QTimeZone::UTC, set to the QTimeZone::LocalTime or QtTimeZoneType::DontConvert to
            use the system local time. */
-        {qt_timezone,     QVariant::fromValue(Qt::UTC)},
+        {qt_timezone,     QVariant::fromValue(QtTimeZoneConfig::utc())},
         {prefix_,         EMPTY},
         {prefix_indexes,  false},
         {strict_,         true},
