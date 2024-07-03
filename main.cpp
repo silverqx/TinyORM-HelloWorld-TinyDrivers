@@ -80,9 +80,9 @@ void run()
         // Very important for tests
         {timezone_,       TZ00},
         /* Specifies what time zone all QDateTime-s will have, the overridden default
-           is the QTimeZone::UTC, set to the QTimeZone::LocalTime or QtTimeZoneType::DontConvert to
-           use the system local time. */
-        {qt_timezone,     QVariant::fromValue(QtTimeZoneConfig::utc())},
+           is the QTimeZone::UTC, set to the QTimeZone::LocalTime or
+           QtTimeZoneType::DontConvert to use the system local time. */
+        {qt_timezone,     QVariant::fromValue(QTimeZone::UTC)},
         {prefix_,         EMPTY},
         {prefix_indexes,  false},
         {strict_,         true},
