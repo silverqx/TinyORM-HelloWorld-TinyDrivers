@@ -42,12 +42,14 @@ if(RESOLVE_TINYORM STREQUAL "FetchContent")
     # set(BUILD_TREE_DEPLOY OFF)
 
 # No logic needed for the vcpkg manifest method
+# If you want to test the HEAD_REF set set(VCPKG_USE_HEAD_VERSION ON) before vcpkg_from_github() and
+# set the HEAD_REF to branch to test, eg. develop
 #elseif(RESOLVE_TINYORM STREQUAL "VcpkgManifest")
 
 # Build or Install tree by CMAKE_PREFIX_PATH
 elseif(RESOLVE_TINYORM STREQUAL "None" OR RESOLVE_TINYORM STREQUAL "Manual")
    # list(APPEND CMAKE_PREFIX_PATH "O:/Code/c/qMedia/tinyorm.org/TinyORM/TinyORM-builds-cmake/build-debug")
-   # list(APPEND CMAKE_PREFIX_PATH "O:/Code/c/qMedia/TinyORM/TinyORM-builds-cmake/build-TinyORM-Desktop_Qt_6_7_0_MSVC2022_64bit-Debug")
+   # list(APPEND CMAKE_PREFIX_PATH "O:/Code/c/qMedia/TinyORM/TinyORM-builds-cmake/build-TinyORM-Desktop_Qt_6_7_2_MSVC2022_64bit-Debug-Drivers-Shared")
    # list(APPEND CMAKE_PREFIX_PATH "E:/c/qMedia/TinyORM/TinyORM-builds-cmake/build-cmake-debug")
    # list(APPEND CMAKE_PREFIX_PATH "E:/c/qMedia/TinyORM/TinyORM-builds-cmake/build-ninja-multi")
 endif()
