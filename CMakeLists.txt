@@ -1,7 +1,7 @@
 # Policies <= CMP0128 default to NEW
 # 3.20 - because is used NEWLINE_STYLE in the file(GENERATE) command
 # 3.22 - because is used CMP0127: cmake_dependent_option() supports full Condition Syntax
-cmake_minimum_required(VERSION 3.22...3.29 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.22...3.30 FATAL_ERROR)
 
 project(HelloWorld-TinyDrivers LANGUAGES CXX)
 
