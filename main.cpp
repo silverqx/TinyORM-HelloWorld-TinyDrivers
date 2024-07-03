@@ -149,8 +149,8 @@ int main(int argc, char *argv[])
 /*
    Expected output:
 
-   Qt 6.7.0 (x86_64-little_endian-llp64 shared (dynamic) debug build; by MSVC 2019)
-   TinyORM 0.36.5 (x86_64-little_endian-llp64 shared debug build; by MSVC 2022 (1939))
+   Qt 6.8.0 (x86_64-little_endian-llp64 shared (dynamic) debug build; by MSVC 2022)
+   TinyORM 0.37.3 (x86_64-little_endian-llp64 shared debug build; by MSVC 2022 (1940))
 
    Executed unprepared query (20ms, 2 results, 2 affected, tinyorm_default) : select id, name from users where id < 3
    1 "andrej"
