@@ -12,6 +12,8 @@
 #include <orm/libraryinfo.hpp>
 #include <orm/tiny/model.hpp>
 
+using Qt::StringLiterals::operator""_s;
+
 using Orm::Constants::EMPTY;
 using Orm::Constants::H127001;
 using Orm::Constants::ID;
@@ -86,7 +88,7 @@ void run()
         {prefix_,         EMPTY},
         {prefix_indexes,  false},
         {strict_,         true},
-        {isolation_level, QStringLiteral("REPEATABLE READ")}, // MySQL default is REPEATABLE READ for InnoDB
+        {isolation_level, u"REPEATABLE READ"_s}, // MySQL default is REPEATABLE READ for InnoDB
         {engine_,         InnoDB},
         {Version,         {}}, // Autodetect
         {options_,        ConfigUtils::mysqlSslOptions()},
@@ -99,7 +101,7 @@ void run()
 
     // Select using QueryBuilder - normal queries
     {
-        auto users = DB::unprepared("select id, name from users where id < 3");
+        auto users = DB::unprepared(u"select id, name from users where id < 3"_s);
 
         while(users.next())
             std::cout << users.value(ID).toULongLong() << SPACE << QUOTE
@@ -107,7 +109,7 @@ void run()
     }
     // Select using QueryBuilder - prepared queries
     {
-        auto users = DB::select("select id, name from users where id < ?", {3});
+        auto users = DB::select(u"select id, name from users where id < ?"_s, {3});
 
         while(users.next())
             std::cout << users.value(ID).toULongLong() << SPACE << QUOTE
