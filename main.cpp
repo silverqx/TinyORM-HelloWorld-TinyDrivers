@@ -54,7 +54,10 @@ using Orm::Utils::Helpers;
 
 using ConfigUtils = Orm::Utils::Configuration;
 
-class User final : public Model<User>
+namespace
+{
+
+class User final : public Model<User> // NOLINT(bugprone-exception-escape)
 {
     friend Model;
     using Model::Model;
@@ -123,6 +126,8 @@ void run()
                       << user.getAttribute<QString>(NAME) << QUOTE << NEWLINE;
     }
 }
+
+} // namespace
 
 int main(int argc, char *argv[])
 {
