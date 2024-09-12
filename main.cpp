@@ -49,7 +49,6 @@ using Orm::Constants::username_;
 
 using Orm::DB;
 using Orm::LibraryInfo;
-using Orm::QtTimeZoneConfig;
 using Orm::Tiny::Model;
 using Orm::Utils::Helpers;
 
